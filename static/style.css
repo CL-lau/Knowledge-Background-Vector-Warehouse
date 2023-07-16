@@ -1,0 +1,27 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #f2f2f2;
+}
+
+.container {
+	margin-top: 50px;
+}
+
+.upload-form, .search-form {
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.upload-form label, .search-form label {
+	font-weight: bold;
+}
+
+.result {
+	margin-top: 20px;
+}
+
+.list-group-item {
+	font-size: 16px;
+}

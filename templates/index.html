@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>文本文件上传和相似语句查询</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<h2 class="text-center">文本文件上传和相似语句查询</h2>
+				<form class="upload-form" action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+					<div class="form-group">
+						<label for="file">选择文件:</label>
+						<input type="file" class="form-control" id="file" name="file">
+					</div>
+					<button type="submit" class="btn btn-primary btn-block">上传文件</button>
+				</form>
+				<hr>
+				<form class="search-form" action="{{ url_for('search') }}" method="post">
+					<div class="form-group">
+						<label for="query">输入查询语句:</label>
+						<input type="text" class="form-control" id="query" name="query">
+					</div>
+					<button type="submit" class="btn btn-primary btn-block">查询相似语句</button>
+				</form>
+				<hr>
+				<div class="result">
+					<h3>查询结果:</h3>
+					<ul class="list-group">
+						{% for sentence in sentences %}
+						<li class="list-group-item">{{ sentence }}</li>
+						{% endfor %}
+					</ul>
+					<ul>
+					{% for result in results %}
+						<li>{{ result }}</li>
+					{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
