@@ -10,7 +10,7 @@ from langchain.llms import OpenAI
 # Set up your OpenAI API key
 import os
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = ""
 
 # Initialize the LLM wrapper
 llm = OpenAI()

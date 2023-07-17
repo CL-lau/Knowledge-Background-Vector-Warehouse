@@ -99,12 +99,12 @@ def AbbreviateMultiParagraph(sentences, openai_api_key=None, openai_api_url=None
     if openai_api_key is None:
         openai_api_key = os.environ.get('OPENAI_API_KEY')
     if openai_api_key is None:
-        openai_api_key = "1664539549952901140"
+        openai_api_key = ""
 
     if openai_api_url is None:
         openai_api_url = os.environ.get('OPENAI_API_URL')
     if openai_api_url is None:
-        openai_api_url = "https://aigc.sankuai.com/v1/openai/native"
+        openai_api_url = ""
 
     # Initialize the LLM wrapper
     llm = OpenAI(temperature=.7, openai_api_key=openai_api_key,
@@ -181,11 +181,11 @@ def exampleStudy(examples, question, openai_api_key=None):
     if openai_api_key is None:
         openai_api_key = os.environ.get('OPENAI_API_KEY')
     if openai_api_key is None:
-        openai_api_key = "1664539549952901140"
+        openai_api_key = ""
 
     # Initialize the LLM wrapper
     llm = OpenAI(temperature=.5, openai_api_key=openai_api_key,
-                 openai_api_base="https://aigc.sankuai.com/v1/openai/native")
+                 openai_api_base="")
 
     # 定义一个问答的模板，使用少量示例进行学习
     template = """根据以下的例子来学习规律，进而来回答问题：

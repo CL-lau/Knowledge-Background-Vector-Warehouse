@@ -31,8 +31,8 @@ def search():
     return render_template('index.html', sentences=sentences)
 
 
-@app.route('/search')
-def search():
+@app.route('/search_')
+def search_():
     query = request.args.get('query')
     # results = search_query(query)
     results = None
