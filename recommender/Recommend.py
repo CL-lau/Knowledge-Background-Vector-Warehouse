@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 import openai
 import torch
-import tensorflow as tf
+# import tensorflow as tf
 import numpy as np
 import pandas as pd
 import nltk
